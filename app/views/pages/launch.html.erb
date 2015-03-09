@@ -35,4 +35,10 @@
 
 	</div>
 
+	<div class="signup-k">
+			<%= link_to "Trade or Sell", new_user_registration_path, class: "button-k" %>
+			<% if can? :manage, :all %>
+			<%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+			<% end %>
+	</div>
 
